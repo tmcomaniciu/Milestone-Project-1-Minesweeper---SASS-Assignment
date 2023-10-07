@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&family=Bungee+Spice&family=Pixelify+Sans&display=swap" rel="stylesheet">
+
   </head>
   <body>
 
@@ -17,12 +18,37 @@
         <div class="wrapText">
             <h1 id="titleFont">minesweeper</h1>
             <div class="legend">
-              <p><strong>flag:</strong>🚩</p>
-              <p><strong>bomb:</strong>💣</p>
+              <p><strong>flag:</strong>🚩 | <strong>bomb:</strong>💣</p>
             </div>
         </div>
     </header>
+
 <!-- Board, Timer, Level, Reset-->
+<main class="boardGame" role="boardGame"> 
+  <div class="textWrap">
+    <div class="gameBoard">
+      <div class="topMenu">
+        <div class="scoreBoard">
+          <div id="bombCount" id="gameTimer">
+<div>
+  <div class="classWrap">
+    <select class="difficultyLevel" id="difficultyLevel">
+      <option value="easyLevel">Easy</option>
+      <option value="normalLevel">Normal</option>
+      <option class="hardLevel">Hard</option>
+    </select>
+  </div>
+  <button class="resetGame">Reset</button>
+</div>
+<div class="countDown" id="gameTimer"></div>
+          </div>
+          <div id="gameGrid"></div>
+        </div>
+        <div class="bottomMenu"></div>
+      </div>
+    </div>
+  </div>
+</main>
 
     <!-- Game Starting Menu-->
     <div id="startMenu" class="model">
