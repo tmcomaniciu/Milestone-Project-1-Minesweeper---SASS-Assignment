@@ -4,29 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minesweeper</title>
-    <script src='script.js'></script>
 
     <link rel="stylesheet" href="style.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&family=Bungee+Spice&family=Pixelify+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
 
-    <!-- Game Title-->
-    <div>
-        <div class="game-title" role="banner">MINESWEEPER</div>
+    <!-- Title and Legend -->
+    <header class="game-header" role="banner">
+        <div class="wrapText">
+            <h1 id="titleFont">minesweeper</h1>
+            <div class="legend">
+              <p><strong>flag:</strong>🚩</p>
+              <p><strong>bomb:</strong>💣</p>
+            </div>
+        </div>
+    </header>
+<!-- Board, Timer, Level, Reset-->
+
+    <!-- Game Starting Menu-->
+    <div id="startMenu" class="model">
+        <div class="modal-content"> 
+            <h2>Minesweeper</h2>
+            <button onclick="startGame()">Start Game</button>
+        </div>
     </div>
 
-    <!-- Welcome message-->
-    <div>
-      <div class="start-game">
-        <p class="welcome">Welcome!</p>
-        <p class="play">Play</p>
-      </div>
-    </div>
-
-    <!-- Game container: Grid -->
-    <div class="container">
-        <div class="grid"></div>
-    </div>
+    <script src='script.js'></script>
 
   </body>
 </html>

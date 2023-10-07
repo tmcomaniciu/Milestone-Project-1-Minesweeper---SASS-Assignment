@@ -1,16 +1,49 @@
-.grid {
-  height: 400px;
-  width: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #dcd6bc;
-  margin-left: 50px;
-  margin-top: 20px;
-  border: 10px solid #dcd6bc;
-  margin-bottom: 10px;
+/* Modal Menu Styling*/
+body {
+  font-family: Arial, sans-serif;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("assets/mouse-bomber.jpg");
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+}
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.grid div {
-  height: 40px;
-  width: 40px;
+/* Title and Legend */
+#titleFont {
+  font-family: "Pixelify Sans", cursive;
+}
+
+/* declaring colors to use in css*/
+:root {
+  --black: #333;
+  --red: #ec433c;
+  --white: #fff;
+
+  --light-grey: #efefef;
+  --medium-grey: #e3e3e3;
+  --grey: #d1d1d1;
+  --dark-grey: #808080;
+
+  --maroon: #a6070f;
+  --purple: #a42887;
+
+  --yellow: #d7af42;
+  --light-yellow: #fef178;
+
+  --blue: #2a48ec;
+  --dark-blue: #233db7;
+
+  --green: #2bb13d;
+  --turquoise: #28907d;
 }
