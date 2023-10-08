@@ -46,7 +46,7 @@ const levels = {
   hard: "16x30x90",
 };
 //declare board variables
-const gameLevel = difficultyLevel.ariaValueMax;
+const gameLevel = difficultyLevel.val;
 var levelParameters,
   rows,
   rowsElements,
@@ -72,3 +72,5 @@ const timer = false;
 const preGame = true;
 
 //code to create levels based on diffulty level pulled from board size in const = levels
+
+function createLevel(gameLevel) {}
