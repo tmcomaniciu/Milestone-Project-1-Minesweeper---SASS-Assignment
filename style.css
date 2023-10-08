@@ -24,7 +24,7 @@ body {
   font-family: "Pixelify Sans", cursive;
 }
 
-/* declaring colors to use in css*/
+/* declaring colors/stylings to use in css*/
 :root {
   --black: #333;
   --red: #ec433c;
@@ -46,4 +46,9 @@ body {
 
   --green: #2bb13d;
   --turquoise: #28907d;
+
+  --cell-size: 25px;
 }
+
+/* html stylings (BASE) */
+/* make sure all classes inherit 
