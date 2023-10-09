@@ -58,7 +58,7 @@ var levelParameters,
   pauseTime;
 
 //const for color of cell near bombs
-const bombCountColor = {
+const colorCount = {
   0: "",
   1: "blue",
   2: "green",
@@ -169,5 +169,89 @@ function createBombs(gameLevel, clickedCellIndex) {
     }
     takenTiles.push(bombTile);
     emptyTiles[bombTile].classList.add("bomb");
+  }
+}
+
+//code to write math to insert numbers on tiles based on number of bombs around
+
+const tiles = document.querySelectorAll(".tile");
+for (t = 0; t < tiles.length; t++) {
+  const tile = tiles[t];
+  tile.setAttribute("data-tile", t);
+
+  //skip the bombs
+  if (tile.classList.contains("bomb")) {
+    continue;
+  }
+
+  //begin adding math for randomized bomb location
+  const bombCount = 0;
+  const rowPosition = Math.floors(t / columns);
+  const currentRow = tile.closest(".row)");
+  currentRow.setAttribute("data-row", rowPosition);
+  const rowCells = currentRow.querySelectorAll(".tile");
+  const tilePosition = t % columns;
+
+  if (
+    rowTiles[tilePosition - 1] &&
+    rowTiles[tilePosition - 1].classList.contains("bomb")
+  ) {
+    bombCount++;
+  }
+  if (
+    rowTiles[tilePosition + 1] &&
+    rowTiles[tilePosition + 1].classList.contains("bomb")
+  ) {
+  }
+  //if statement to declare if any given tiles has a bomb near it, based on intervals of 1
+  if (rowPosition > 0) {
+    const previousRowTiles = rows[rowPosition - 1].querySelectorAll(".tile");
+    if (
+      previousRowTiles[tilePosition - 1] &&
+      previousRowTiles[tilePosition - 1].classList.contains("bomb")
+    ) {
+      bombCount++;
+    }
+    if (
+      previousRowTiles[tilePosition] &&
+      previousRowTiles[tilePosition].classList.contains("bomb")
+    ) {
+      bombCount++;
+    }
+    if (
+      previousRowTiles[tilePosition + 1] &&
+      previousRowTiles[tilePosition + 1].classList.contains("bomb")
+    ) {
+      bombCount++;
+    }
+  }
+  if (rowPosition < rows - 1) {
+    var nextRowTiles = rows[rowPos + 1].querySelectorAll(".cell");
+    if (
+      nextRowTiles[cellPosition - 1] &&
+      nextRowTiles[cellPosition - 1].classList.contains("bomb")
+    ) {
+      bombCount++;
+    }
+    if (
+      nextRowTiles[cellPosition] &&
+      nextRowTiles[cellPosition].classList.contains("bomb")
+    ) {
+      bombCount++;
+    }
+    if (
+      nextRowTiles[cellPosition + 1] &&
+      nextRowTiles[cellPosition + 1].classList.contains("bomb")
+    ) {
+      bombCount++;
+    }
+  }
+  if (bombCount > 0) {
+    tile.innerHTML = "<i>" + bombCount + "</i>";
+    // Styling classes
+    const colorClass = colorCount[bombCount];
+    tile.classList.add(colorClass);
+  } else {
+    tile.classList.add("zero");
   }
 }
