@@ -51,9 +51,9 @@ var levelParameters,
   rows,
   rowsElements,
   columns,
-  cellCount,
+  tileCount,
   bombs,
-  emptyCells,
+  emptyTiles,
   bombsCount,
   pauseTime;
 
@@ -79,9 +79,9 @@ function createLevel(gameLevel) {
   const levelParts = levelParameters.split("x");
   rows = parseInt(levelParts[0]);
   columns = parseInt(levelParts[1]);
-  cellCount = rows * columns;
+  tileCount = rows * columns;
   mines = parseInt(levelParts[2]);
-  emptyCells = cellCount - mines;
+  emptyTiles = tileCount - mines;
 }
 
 //function to create board, set up/build board using math above, pre-game
@@ -151,3 +151,23 @@ difficultyLevel.addEventListener("change", function () {
   gameLevel = difficultyLevel.ariaValueMax;
   createBoard();
 });
+
+//code to start laying down bombs based on two functions up
+function createBombs(gameLevel, clickedCellIndex) {
+  const rows = document.querySelectorAll("row");
+  const emptyTiles = document.querySelectorAll("tiles");
+  const takenTiles = [clickedCellIndex];
+
+  //creation of bombs
+  for (const b = 0; b < bombs; b++) {
+    const bombTile = Math.floor(Math.random() * emptyTiles.length);
+
+    //ignore clicked tiles
+    if (takenTiles.includes(bombTile)) {
+      b--;
+      continue;
+    }
+    takenTiles.push(bombTile);
+    emptyTiles[bombTile].classList.add("bomb");
+  }
+}
