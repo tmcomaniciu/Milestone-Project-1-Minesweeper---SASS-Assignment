@@ -9,3 +9,20 @@ JavaScript, however, is the linchpin that brings Minesweeper to life. This proje
 Moreover, Minesweeper serves as an excellent platform to explore responsive design principles. Adapting the game to various screen sizes and ensuring a seamless experience across devices hones my skills in making web applications accessible and user-friendly.
 
 In essence, Minesweeper is not just a game; it's a canvas that allows me to merge the realms of HTML, CSS, and JS into a cohesive and dynamic web application. The process of creating this project is an invaluable learning experience, pushing me to grasp the intricacies of frontend development while delivering a tangible result that reflects my growth and proficiency in the field.
+
+Inspiration taken from Ania Kubow
+
+- https://www.youtube.com/watch?v=rxdGAKRndz8&t=846s
+- https://www.youtube.com/watch?v=W0No1JDc6vE&t=336s
+
+Some more inspiration taken from Web Dev Simplified
+
+- https://www.youtube.com/watch?v=W0No1JDc6vE&t=336s
+
+Used ChatGPT for questions, https://www.w3schools.com/ for help with new topics, and MDN Web Docs (https://developer.mozilla.org/en-US/).
+
+inspiration image taken from https://minesweeper.online/
+
+Used stack overflow frequently as well https://stackoverflow.com/
+
+Box shadow taken from https://getcssscan.com/css-box-shadow-examples
