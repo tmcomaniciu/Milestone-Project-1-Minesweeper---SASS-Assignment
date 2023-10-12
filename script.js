@@ -1,3 +1,13 @@
+$(document).ready(function () {
+  // Show pop-up on page load
+  $("#instructions-popup").show();
+
+  // Close pop-up when close button is clicked
+  $(".close-popup").click(function () {
+    $("#instructions-popup").hide();
+  });
+});
+
 // Wait for the DOM to be fully loaded before executing the code
 document.addEventListener("DOMContentLoaded", function () {
   // Declare variables for common DOM elements and game parameters
