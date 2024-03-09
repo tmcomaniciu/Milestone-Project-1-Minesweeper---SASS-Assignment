@@ -1,0 +1,30 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; // 16px
+}
+
+body {
+  font-family: $font-family-main;
+  background-color: $background-color;
+  color: $text-color;
+  padding: $base-padding;
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,4 @@
+@function calc-grid-size($cells, $size: $grid-cell-size, $margin: $border-width-default) {
+    @return ($cells * ($size + $margin)) + $margin;
+  }
+  

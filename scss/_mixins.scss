@@ -1,0 +1,24 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin box-shadow-default {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  @mixin border-default {
+    border: $border-width-default $border-style-default $border-color-default;
+  }
+  
+  @mixin button-reset-styles {
+    background-color: $grid-bg-color;
+    border: $border-width-default $border-style-default;
+    border-color: white $border-color-default $border-color-default white;
+    &:hover, &:focus {
+      background-color: darken($grid-bg-color, 5%);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+  

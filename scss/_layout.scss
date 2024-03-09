@@ -1,0 +1,74 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #board {
+    width: calc(100% - 40px); // Assuming 20px padding on each side
+    max-width: 1200px; // or the max-width you want for the board
+    margin: 0 auto;
+  }
+  
+  #grid {
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    gap: $border-width-default;
+    // The JavaScript should define the grid-template-columns based on the game level
+  }
+  
+
+.wrap {
+    @include flex-center;
+    flex-direction: column;
+  }
+  
+  .site-header {
+    h1 {
+      font-family: $font-family-secondary;
+      color: $secondary-color;
+    }
+  }
+  
+  .site-main {
+    .top {
+      @include box-shadow-default;
+      background-color: $info-bg-color;
+    }
+  
+    #info {
+      @include flex-center;
+      justify-content: space-between;
+      padding: $base-padding 0;
+    }
+  }
+  
+  #grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $border-width-default;
+    margin: 0 auto;
+  
+    .row {
+      display: flex;
+      width: 100%;
+    }
+  
+    .cell {
+      flex: 0 0 auto; 
+      background-color: $grid-bg-color;
+      @include border-default;
+      &:hover {
+        background-color: lighten($grid-bg-color, 10%);
+      }
+      
+    }
+  }
+  
+  
+  
