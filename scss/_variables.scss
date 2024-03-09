@@ -1,9 +1,20 @@
-// Color Palette
-$primary-color: #333;
-$secondary-color: #ec433c;
-$background-color: #fff;
+$font-primary: "Bungee Spice", cursive;
+$font-secondary: "Courier New", Courier, monospace;
+$color-primary: rgb(231, 87, 47);
+$color-secondary: #333;
+$color-background: rgba(253, 76, 0, 0.5);
+$color-shadow: rgb(38, 57, 77);
+$color-text: #333;
+$color-border: #9e9e9e;
+$color-highlight: rgba(253, 76, 0, 0.5);
+$color-info-bg: #d1d1d1;
+$color-error: #f10707;
+$color-success: #2bb13d;
+$color-warning: #d7af42;
+$color-info: #2a48ec;
+
 $text-color: #333;
-$link-color: $primary-color;
+$link-color:  #2a48ec;
 $highlight-color: #fef178;
 $info-bg-color: #e3e3e3;
 $grid-bg-color: #d1d1d1;

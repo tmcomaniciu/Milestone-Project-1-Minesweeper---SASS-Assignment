@@ -1,1 +1,29 @@
-@import 'variables', 'mixins', 'base', 'components', 'layout';
+// Main SCSS file importing all partials
+@use 'variables';
+@use 'mixins';
+@use 'functions';
+@use 'error';
+
+// General and element-specific styles using variables and mixins
+body {
+  font-family: variables.$font-primary;
+  color: variables.$color-text;
+  background-color: variables.$color-background;
+  @include mixins.box-shadow(0px, 0px, 10px, variables.$color-shadow);
+}
+
+.key {
+  @include mixins.border-style(3px, solid, variables.$color-border);
+  h4, p {
+    font-family: variables.$font-secondary;
+  }
+}
+
+// Example of nested selectors with the ampersand
+.wrap {
+  position: relative;
+  &.center { @include mixins.flex-center; }
+  .button {
+    &:hover, &:focus { background-color: functions.color-tint(variables.$color-primary, 20%); }
+  }
+}

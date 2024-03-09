@@ -2,3 +2,10 @@
     @return ($cells * ($size + $margin)) + $margin;
   }
   
+@function color-shade($color, $percent) {
+  @return mix(black, $color, $percent);
+}
+
+@function color-tint($color, $percent) {
+  @return mix(white, $color, $percent);
+}

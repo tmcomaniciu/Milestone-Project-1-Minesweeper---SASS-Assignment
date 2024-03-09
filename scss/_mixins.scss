@@ -4,12 +4,14 @@
     align-items: center;
   }
   
-  @mixin box-shadow-default {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @mixin box-shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
   }
   
-  @mixin border-default {
-    border: $border-width-default $border-style-default $border-color-default;
+  @mixin border-style($width, $style, $color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
   }
   
   @mixin button-reset-styles {

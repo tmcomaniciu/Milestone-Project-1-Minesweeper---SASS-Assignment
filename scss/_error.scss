@@ -1,0 +1,6 @@
+@import 'variables';
+
+@if type-of($color-primary) != color {
+    @error "Primary color should be a color value";
+  }
+  
